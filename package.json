@@ -68,6 +68,7 @@
     "workbox-streams": "^5.1.3"
   },
   "scripts": {
+    "dev": "yarn buildThemes && craco start",
     "start": "yarn buildThemes && craco start",
     "build": "yarn buildThemes && craco build",
     "test": "craco test",
