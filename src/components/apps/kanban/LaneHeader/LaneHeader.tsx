@@ -1,39 +1,39 @@
-import React, { useMemo } from 'react';
-import InlineInput from 'react-trello/dist/widgets/InlineInput';
-import * as S from './LaneHeader.styles';
-import { CardState } from '../interfaces';
+import React, {useMemo} from 'react'
+import InlineInput from 'react-trello/dist/widgets/InlineInput'
+import * as S from './LaneHeader.styles'
+import {CardState} from '../interfaces'
 
 interface LaneHeaderProps {
-  updateTitle: () => void;
-  editLaneTitle: boolean;
-  style: CSSStyleSheet;
-  title: string;
-  onDoubleClick: () => void;
-  cards: Array<CardState>;
+    updateTitle: () => void
+    editLaneTitle: boolean
+    style: CSSStyleSheet
+    title: string
+    onDoubleClick: () => void
+    cards: Array<CardState>
 }
 
 export const LaneHeader: React.FC<LaneHeaderProps> = ({
-  updateTitle,
-  onDoubleClick,
-  editLaneTitle = false,
-  title,
-  style,
-  cards,
+    updateTitle,
+    onDoubleClick,
+    editLaneTitle = false,
+    title,
+    style,
+    cards,
 }) => {
-  const numberOfCards = useMemo(() => (cards?.length ? `${cards.length}` : ''), [cards?.length]);
-  return (
-    <S.Header onDoubleClick={onDoubleClick} editLaneTitle={editLaneTitle} style={style}>
-      <S.Title>
-        {editLaneTitle ? (
-          <InlineInput value={title} border placeholder={title} resize="vertical" onSave={updateTitle} />
-        ) : (
-          <>
-            {title}
-            {cards.length ? <S.Dot>·</S.Dot> : ''}
-            {numberOfCards}
-          </>
-        )}
-      </S.Title>
-    </S.Header>
-  );
-};
+    const numberOfCards = useMemo(() => (cards?.length ? `${cards.length}` : ''), [cards?.length])
+    return (
+        <S.Header onDoubleClick={onDoubleClick} editLaneTitle={editLaneTitle} style={style}>
+            <S.Title>
+                {editLaneTitle ? (
+                    <InlineInput value={title} border placeholder={title} resize="vertical" onSave={updateTitle} />
+                ) : (
+                    <>
+                        {title}
+                        {cards.length ? <S.Dot>·</S.Dot> : ''}
+                        {numberOfCards}
+                    </>
+                )}
+            </S.Title>
+        </S.Header>
+    )
+}

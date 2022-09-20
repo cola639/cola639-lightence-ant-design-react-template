@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  display: flex;
+    display: flex;
 
-  & + div {
-    margin-top: 2rem;
-  }
-`;
+    & + div {
+        margin-top: 2rem;
+    }
+`

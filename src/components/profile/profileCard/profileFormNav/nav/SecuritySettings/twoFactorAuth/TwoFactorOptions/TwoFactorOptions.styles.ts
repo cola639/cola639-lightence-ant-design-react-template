@@ -1,18 +1,18 @@
-import styled from 'styled-components';
-import { Radio } from '@app/components/common/Radio/Radio';
+import styled from 'styled-components'
+import {Radio} from '@app/components/common/Radio/Radio'
 
 interface RadioBtnProps {
-  $isActive: boolean;
+    $isActive: boolean
 }
 
 export const RadioBtn = styled(Radio)<RadioBtnProps>`
-  margin-right: 0;
-  width: 100%;
-  transition: all 0.5s ease;
+    margin-right: 0;
+    width: 100%;
+    transition: all 0.5s ease;
 
-  ${(props) => !props.$isActive && 'opacity: 0.5'};
+    ${props => !props.$isActive && 'opacity: 0.5'};
 
-  & > span:last-of-type {
-    flex-grow: 1;
-  }
-`;
+    & > span:last-of-type {
+        flex-grow: 1;
+    }
+`

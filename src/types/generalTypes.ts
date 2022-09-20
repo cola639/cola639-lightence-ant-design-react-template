@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
+import {ReactNode} from 'react'
 
 export type WithChildrenProps<T = undefined> = T extends undefined
-  ? {
-      children?: ReactNode;
-    }
-  : T & {
-      children?: ReactNode;
-    };
+    ? {
+          children?: ReactNode
+      }
+    : T & {
+          children?: ReactNode
+      }

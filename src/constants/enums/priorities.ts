@@ -1,6 +1,6 @@
 export enum Priority {
-  INFO,
-  LOW,
-  MEDIUM,
-  HIGH,
+    INFO,
+    LOW,
+    MEDIUM,
+    HIGH,
 }

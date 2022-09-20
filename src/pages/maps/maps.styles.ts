@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { Card } from '@app/components/common/Card/Card';
+import styled from 'styled-components'
+import {Card} from '@app/components/common/Card/Card'
 
 export const MapsCard = styled(Card)`
-  height: 70vh;
-  overflow-y: auto;
+    height: 70vh;
+    overflow-y: auto;
 
-  .leaflet-container {
-    z-index: 0;
-  }
-`;
+    .leaflet-container {
+        z-index: 0;
+    }
+`
