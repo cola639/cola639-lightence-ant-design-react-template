@@ -7,7 +7,8 @@ export const store = configureStore({
     middleware: getDefaultMiddleware => getDefaultMiddleware().concat(errorLoggingMiddleware),
 })
 
-console.log('store.getState', store.getState)
+console.log('store', store)
+console.log('store.getState', store.getState()) // efficiently debug
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
