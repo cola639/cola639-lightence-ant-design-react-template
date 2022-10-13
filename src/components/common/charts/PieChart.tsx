@@ -8,7 +8,7 @@ import {BASE_COLORS} from '@app/styles/themes/constants'
 interface PieChartProps extends BaseChartProps {
     option?: EChartsOption
     // eslint-disable-next-line
-  data?: any;
+    data?: any
     name?: string
     showLegend?: boolean
 }

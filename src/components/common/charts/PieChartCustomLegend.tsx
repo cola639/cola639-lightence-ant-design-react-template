@@ -6,9 +6,9 @@ import {EChartsOption} from 'echarts-for-react'
 interface PieChartCustomLegend {
     name: string
     // eslint-disable-next-line
-  chartData: any[];
+    chartData: any[]
     // eslint-disable-next-line
-  legendData: LegendItem[];
+    legendData: LegendItem[]
     height?: string
     width?: string
     option?: EChartsOption

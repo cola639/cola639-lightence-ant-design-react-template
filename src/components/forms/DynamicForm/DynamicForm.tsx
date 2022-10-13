@@ -67,7 +67,7 @@ export const DynamicForm: React.FC = () => {
                                     <BaseButtonsForm.Item
                                         noStyle
                                         // eslint-disable-next-line
-                    shouldUpdate={(prevValues: any, curValues: any) =>
+                                        shouldUpdate={(prevValues: any, curValues: any) =>
                                             prevValues.area !== curValues.area || prevValues.sights !== curValues.sights
                                         }>
                                         {() => (

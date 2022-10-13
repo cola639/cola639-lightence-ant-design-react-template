@@ -6,7 +6,7 @@ export interface CreditCard {
     name: string
     number: string
     // eslint-disable-next-line
-  focused: any;
+    focused: any
     background: string
     isEdit: boolean
 }
