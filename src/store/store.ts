@@ -10,5 +10,5 @@ export const store = configureStore({
 console.log('store', store)
 console.log('store.getState', store.getState()) // efficiently debug
 
-export type RootState = ReturnType<typeof store.getState>
+export type RootState = ReturnType<typeof store.getState> // all type defined
 export type AppDispatch = typeof store.dispatch

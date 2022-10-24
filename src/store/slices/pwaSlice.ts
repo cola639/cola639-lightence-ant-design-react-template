@@ -10,6 +10,7 @@ export const pwaSlice = createSlice({
     name: 'pwa',
     initialState,
     reducers: {
+        // sync operation
         addDeferredPrompt: (state, action) => {
             state.event = action.payload
             state.isPWASupported = true

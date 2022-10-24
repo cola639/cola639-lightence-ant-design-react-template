@@ -1,17 +1,15 @@
 import {createAction, createSlice, PrepareAction} from '@reduxjs/toolkit'
 
-const DEFAULT_NIGHT_MODE_INTERVAL = [20 * 3600 * 1000, 8 * 3600 * 1000]
-
 interface NightModeState {
     isNightMode: boolean
     nightTime: number[]
 }
 
+const DEFAULT_NIGHT_MODE_INTERVAL = [20 * 3600 * 1000, 8 * 3600 * 1000]
 const currentNightTimeJSON = localStorage.getItem('nightTime')
 const currentNightTime: number[] = currentNightTimeJSON
     ? (JSON.parse(currentNightTimeJSON) as number[])
     : DEFAULT_NIGHT_MODE_INTERVAL
-
 const isNightMode = localStorage.getItem('nightMode') === 'true'
 
 localStorage.setItem('nightTime', JSON.stringify(currentNightTime))
